@@ -7,11 +7,12 @@ Based on this [Specification](https://github.com/cekingx/free-time-project-spec/
 - [x] config
 
 serve static content
-- [ ] nestjs static content
-- [ ] tailwind config
+- [x] nestjs static content
+- [x] tailwind config
 
 cookie based authentication
 - [x] nestjs cookie session
+- [ ] authentication screen
 - [ ] auth guard
 
 handle websocket
