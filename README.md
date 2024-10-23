@@ -11,6 +11,7 @@ serve static content
 - [ ] tailwind config
 
 cookie based authentication
-- [ ] nestjs cookie technique
+- [x] nestjs cookie session
+- [ ] auth guard
 
 handle websocket
