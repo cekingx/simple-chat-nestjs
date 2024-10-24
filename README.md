@@ -12,7 +12,7 @@ serve static content
 
 cookie based authentication
 - [x] nestjs cookie session
-- [ ] authentication screen
+- [x] authentication screen
 - [ ] auth guard
 
 handle websocket

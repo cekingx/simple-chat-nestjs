@@ -5,6 +5,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { AuthController } from './controller/auth.controller';
+import { ChatController } from './controller/chat.controller';
 
 @Module({
   imports: [
@@ -24,10 +26,10 @@ import { join } from 'path';
       inject: [ConfigService]
     }),
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
+      rootPath: join(__dirname, '..', '..', 'public'),
     })
   ],
-  controllers: [AppController],
+  controllers: [AppController, AuthController, ChatController],
   providers: [AppService],
 })
 export class AppModule {}

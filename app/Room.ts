@@ -21,11 +21,6 @@ class Room {
 
   update(message: Message, sender: User) {
     this.roomInteractor.update(message, sender, this);
-    for (const participant of this.participants) {
-      if (participant !== sender) {
-        participant.notify(message)
-      }
-    }
   }
 }
 

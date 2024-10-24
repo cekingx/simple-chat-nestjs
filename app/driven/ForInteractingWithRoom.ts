@@ -4,5 +4,4 @@ import User from "app/User";
 
 export interface ForInteractingWithRoom {
   update(message: Message, sender: User, room: Room): void;
-  getAllMessages(): Message[];
 }
