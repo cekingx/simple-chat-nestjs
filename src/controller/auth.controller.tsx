@@ -1,5 +1,4 @@
 import { Body, Controller, Get, Post, Render, Res, Session } from '@nestjs/common';
-import { Layout } from 'view';
 import { Login } from 'view/login/login';
 
 @Controller('auth')

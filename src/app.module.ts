@@ -7,6 +7,9 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { AuthController } from './controller/auth.controller';
 import { ChatController } from './controller/chat.controller';
+import { MessageModel } from './model/message.model';
+import { RoomModel } from './model/room.model';
+import { UserModel } from './model/user.model';
 
 @Module({
   imports: [
@@ -25,6 +28,7 @@ import { ChatController } from './controller/chat.controller';
       }),
       inject: [ConfigService]
     }),
+    TypeOrmModule.forFeature([MessageModel, RoomModel, UserModel]),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', '..', 'public'),
     })
