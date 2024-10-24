@@ -10,6 +10,7 @@ import { ChatController } from './controller/chat.controller';
 import { MessageModel } from './model/message.model';
 import { RoomModel } from './model/room.model';
 import { UserModel } from './model/user.model';
+import { UserService } from './service/user.service';
 
 @Module({
   imports: [
@@ -34,6 +35,6 @@ import { UserModel } from './model/user.model';
     })
   ],
   controllers: [AppController, AuthController, ChatController],
-  providers: [AppService],
+  providers: [AppService, UserService],
 })
 export class AppModule {}
