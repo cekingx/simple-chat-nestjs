@@ -20,4 +20,7 @@ database
 - [x] room
 - [x] message
 
+chat
+- [ ] get chat by room id
+
 handle websocket

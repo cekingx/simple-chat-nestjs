@@ -7,6 +7,9 @@ export class RoomModel {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @Column()
+  name: string;
+
   @OneToMany(() => MessageModel, message => message.room)
   messages: MessageModel[];
 

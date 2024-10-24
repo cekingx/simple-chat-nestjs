@@ -1,5 +1,6 @@
 import { Body, Controller, Get, Post, Render, Res, Session } from '@nestjs/common';
 import { UserService } from 'src/service/user.service';
+import { Error } from 'view/error';
 import { Login } from 'view/login/login';
 import { Unauthorized } from 'view/unauthorized';
 
@@ -24,7 +25,7 @@ export class AuthController {
 
     if(user instanceof Error) {
       return res.send(
-        <Unauthorized message={user.message}/>
+        <Error title='Unautorized' message={user.message}/>
       )
     }
 
